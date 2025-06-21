@@ -4,15 +4,9 @@ This repository contains the project materials for various training batches at I
 
 ## How to Navigate to Your Batch
 
-To find the materials for your specific batch, please look for the directory corresponding to your batch name. For example, if you are in the "June Web Dev" batch, your files will be in the `june-web-dev` directory.
+To find the materials for your specific batch, please look for the directory with the name of your batch. The directories are named to reflect the batch they correspond to (e.g., `june-web-dev` for the June Web Development batch).
 
-Here are the current batch folders:
-
-*   `android-batch`
-*   `june-dsa`
-*   `june-web-dev`
-
-Simply click on the folder that matches your batch to access your course materials.
+You can see all the batch folders listed in the repository's main view. Simply click on the folder that matches your batch to access your course materials.
 
 ---
 
