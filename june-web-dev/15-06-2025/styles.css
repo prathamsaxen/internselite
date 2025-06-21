@@ -1,0 +1,90 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+    background-color: red;
+    padding: 10px;
+    margin: auto;
+    display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+}
+
+.box{
+    background-color: black;
+    height: 200px;
+    border: 2px solid white;
+    width: 200px;
+    animation-name: box-Animation;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out; /* Timing Function */
+    /* transition: all 2s ease; */
+    transition-property: all;
+    transition-duration: 2s;
+    transition-timing-function: ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h1{
+        color: white;
+        width: 100%;
+    }
+   }
+
+   .box:hover{
+    background-color: blue;
+    transform: scale(1.5);
+   }
+
+@keyframes box-Animation {
+    from{
+        transform: rotate(-250deg);
+        opacity: .1;
+    }    
+    to{
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width:480px) {
+    .container{
+        background-color: pink;
+    }
+    .box{
+        h1{
+            font-size: 10px;
+            text-align: center;
+        }
+    }
+}
+
+
+@media screen and (min-width:481px) and (max-width:768px) {
+    .container{
+        background-color: yellow;
+    }
+    .box{
+        h1{
+            font-size: 20px;
+            text-align: center;
+        }
+    }
+}
+
+@media screen and (min-width:769px) and (max-width:1080px) {
+    .container{
+        background-color: burlywood;
+    }
+     .box{
+        h1{
+            font-size: 30px;
+            text-align: center;
+        }
+    }
+}
