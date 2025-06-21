@@ -1,3 +1,7 @@
+<div align="center">
+  <img src="https://github.com/prathamsaxen.png" alt="Pratham Saxena" width="150" height="150" style="border-radius:50%;">
+</div>
+
 # Welcome to the Internselite Training Repository
 
 This repository contains the project materials for various training batches at Internselite.
@@ -14,5 +18,5 @@ You can see all the batch folders listed in the repository's main view. Simply c
 
 This repository is maintained by **Pratham Saxena**.
 
-*   **LinkedIn**: [Your LinkedIn Profile URL]
-*   **Instagram**: [Your Instagram Profile URL]
+*   **LinkedIn**: https://www.linkedin.com/in/prathamsaxena
+*   **Instagram**: https://www.instagram.com/prathamsaxen/
