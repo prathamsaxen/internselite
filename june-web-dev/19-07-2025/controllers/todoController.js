@@ -26,4 +26,16 @@ router.get("/",async(req,res)=>{
     }
 })
 
+router.delete("/:id",async(req,res)=>{
+  const documentId=req.params.id;
+  try{
+    await Todo.findByIdAndDelete(documentId);
+    return res.status(200).json({message:"Task Deleted Successfuly"});
+  }
+  catch(err)
+  {
+    console.log(err);
+  }
+});
+
 module.exports=router;

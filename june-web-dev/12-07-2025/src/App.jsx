@@ -5,19 +5,43 @@ import Task from "./Components/Task";
 function App() {
   const [task, setTask] = useState([]);
   const [inputValue, setInputValue] = useState("");
-  const handleAddTask = () => {
+  const handleAddTask = async () => {
     if (inputValue.trim()) {
-      setTask([...task, inputValue]);
-      setInputValue("");
+      try {
+        const status = await fetch("http://localhost:4000/api/todos", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ name: inputValue }),
+        });
+        await getTasks();
+        setInputValue("");
+      } catch (err) {
+        console.log(err);
+      }
     }
   };
-  const deleteTask = (id) => {
-    setTask((data) => {
-      return data.filter((item, index) => index !== id);
-    });
+  const deleteTask =async (id) => {
+    try{
+      const status = await fetch(`http://localhost:4000/api/todos/${id}`,{method:"DELETE"});
+      await getTasks();
+    }
+    catch(err)
+    {
+      console.log(err);
+    }
   };
 
-  const [elements,setElements]=useState([]);
+  const getTasks = async () => {
+    try {
+      const status = await fetch("http://localhost:4000/api/todos");
+      const response = await status.json();
+      setTask(response);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  const [elements, setElements] = useState([]);
 
   const fetchData = async () => {
     try {
@@ -27,12 +51,13 @@ function App() {
       setElements(data);
     } catch (err) {
       console.log(err);
-      setElements([{title:"Pratham Saxena"},{title:"Apple"},{title:"Banana"}])
+      setElements([{ title: "Pratham Saxena" }, { title: "Apple" }, { title: "Banana" }]);
     }
   };
 
   useEffect(() => {
-    fetchData();
+    // fetchData();
+    getTasks();
   }, []);
   return (
     <div className="container">
@@ -46,13 +71,13 @@ function App() {
         <button onClick={handleAddTask}>Add</button>
       </div>
       {task.map((data, index) => {
-        return <Task task={data} key={index} index={index} deleteTask={deleteTask} />;
+        return <Task task={data.name} key={data._id} index={data._id} deleteTask={deleteTask} />;
       })}
-      {
+      {/* {
         elements.map((data,index)=>{
           return <div key={index}>{data.title}</div>
         })
-      }
+      } */}
     </div>
   );
 }
