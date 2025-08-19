@@ -1,0 +1,78 @@
+/* Reset Default Padding and Margin */
+*{
+    padding: 0;
+    margin: 0;
+}
+.wrapper{
+    background-color: yellow;
+    width: 100vw;
+    /* height: 100vh; */
+    /* padding:10%; */
+
+    /* Flex Properties */
+     display: flex;
+     /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.container{
+    background-color: pink;
+    display: inline-block;
+    width: 250px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* animation: rotate-anim 1s ease-in-out; */
+    /* animation: visibility-anim 4s ease-in-out; */
+    /* What is Timing function in Animations? */
+}
+
+@keyframes rotate-anim {
+    from{
+        transform: rotate(720deg);
+        scale: 0.1;
+    }
+    to{
+        transform: rotate(0deg);
+        scale: 1;
+    }
+}
+
+@keyframes visibility-anim {
+     from{
+      opacity: 0.1;
+    }
+    to{
+       opacity: 1;
+    }
+}
+
+/* Media Queries always written in the form of Screen ViewPort (Width). */
+/* Under 320px will be for Watch Screens - I watch */
+/* 320 Px - 480 px -> Mobile */
+/* 480px - 768px -> Tablet or Big Size Mobile (Fold Phones) */
+/* 769px - 1080px -> Middle Size Laptops or Big Size Tablets */
+/* 1080 - 1440/1260px -> Big screen laptops */
+/* 1440+ -> Televisions */
+
+@media screen and (max-width:480px){
+    .wrapper{
+        background-color: black;
+    }
+}
+
+@media screen and (min-width:481px)  and (max-width:768px){
+    .wrapper{
+        background-color: red;
+    }
+}
+
+@media screen and (min-width:769px)  and (max-width:1080px){
+    .wrapper{
+        background-color: blue;
+    }
+}
