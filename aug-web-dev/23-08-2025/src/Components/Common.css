@@ -1,0 +1,19 @@
+.wrapper{
+    border: 1px solid white;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    button{
+        margin: 0;
+    }
+}
+
+.header,.footer{
+    height: 10%;
+}
+.section{
+    height: 80%;
+     align-items: center;
+}
