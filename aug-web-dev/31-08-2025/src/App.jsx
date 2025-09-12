@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
@@ -7,15 +7,46 @@ import ListItem from "./Components/ListItem";
 function App() {
   const [task, setTask] = useState([]);
   const [inputValue, setInputValue] = useState("");
-  const addTask = () => {
-    if (inputValue.trim() !== "") {
-      setTask([...task, inputValue]);
-      setInputValue("");
+
+  useEffect(() => {
+    getData();
+  }, []);
+
+  const getData = async () => {
+    try {
+      const status = await fetch("http://127.0.0.1:8000/todo");
+      const data = await status.json();
+      setTask(data);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+  const addTask = async () => {
+    try {
+      if (inputValue.trim() !== "") {
+        const status = await fetch("http://127.0.0.1:8000/todo", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ task: inputValue }),
+        });
+        getData();
+        setInputValue("");
+      }
+    } catch (err) {
+      console.log(err);
     }
   };
 
-  const deleteTask = (index) => {
-    setTask((oldData) => oldData.filter((item, position) => index !== position));
+  const deleteTask = async(index) => {
+     try {
+      await fetch(`http://127.0.0.1:8000/todo/${index}`,{method:"DELETE"});
+      getData();
+   
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   return (
@@ -34,7 +65,7 @@ function App() {
         <div className="task-list">
           {/* <ListItem data={"Pratham Saxena"}/> */}
           {task.map((item, index) => (
-            <ListItem data={item} key={index} index={index} deleteFunction={deleteTask} />
+            <ListItem data={item.task} key={item._id} index={item._id} deleteFunction={deleteTask} />
           ))}
         </div>
       </div>

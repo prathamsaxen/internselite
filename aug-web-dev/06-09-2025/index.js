@@ -2,16 +2,19 @@ const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
 const connectDB = require("./config/database");
-const { getAllTask, addTodo, deleteTodo } = require("./controllers/todo-controller");
+const { getAllTask, addTodo, deleteTodo, updateTodo } = require("./controllers/todo-controller");
+const cors=require('cors');
 
 connectDB();
 
 app.use(bodyParser.urlencoded());
 app.use(bodyParser.json());
+app.use(cors());
 
 app.get("/todo", getAllTask);
 app.post("/todo", addTodo);
 app.delete("/todo/:id", deleteTodo);
+app.put('/todo/:id',updateTodo)
 
 // app.get("/test", (req, res) => {
 //   res.send("Server is Healthy");
