@@ -3,8 +3,10 @@ import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
 import ListItem from "./Components/ListItem";
+import Login from "./Components/Login";
 
 function App() {
+  const [isAuthenticated, setAuthenticated] = useState(null);
   const [task, setTask] = useState([]);
   const [inputValue, setInputValue] = useState("");
 
@@ -39,11 +41,10 @@ function App() {
     }
   };
 
-  const deleteTask = async(index) => {
-     try {
-      await fetch(`http://127.0.0.1:8000/todo/${index}`,{method:"DELETE"});
+  const deleteTask = async (index) => {
+    try {
+      await fetch(`http://127.0.0.1:8000/todo/${index}`, { method: "DELETE" });
       getData();
-   
     } catch (err) {
       console.log(err);
     }
@@ -51,24 +52,33 @@ function App() {
 
   return (
     <>
-      <div className="container">
-        <h1>Todo App</h1>
-        <div className="header">
-          <input
-            type="text"
-            placeholder="Enter Todo..."
-            value={inputValue}
-            onChange={(event) => setInputValue(event.target.value)}
-          />
-          <button onClick={addTask}>Add</button>
+      {isAuthenticated ? (
+        <div className="container">
+          <h1>Todo App</h1>
+          <div className="header">
+            <input
+              type="text"
+              placeholder="Enter Todo..."
+              value={inputValue}
+              onChange={(event) => setInputValue(event.target.value)}
+            />
+            <button onClick={addTask}>Add</button>
+          </div>
+          <div className="task-list">
+            {/* <ListItem data={"Pratham Saxena"}/> */}
+            {task.map((item, index) => (
+              <ListItem
+                data={item.task}
+                key={item._id}
+                index={item._id}
+                deleteFunction={deleteTask}
+              />
+            ))}
+          </div>
         </div>
-        <div className="task-list">
-          {/* <ListItem data={"Pratham Saxena"}/> */}
-          {task.map((item, index) => (
-            <ListItem data={item.task} key={item._id} index={item._id} deleteFunction={deleteTask} />
-          ))}
-        </div>
-      </div>
+      ) : (
+        <Login setAuthenticated={setAuthenticated}/>
+      )}
     </>
   );
 }
