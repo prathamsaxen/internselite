@@ -18,12 +18,9 @@ const Login = ({ setAuthenticated }) => {
       });
 
       const data = await res.json();
-      console.log(data);
-
       if (res.ok) {
-        // Save token in localStorage/sessionStorage
-        localStorage.setItem("token", data);
-        setAuthenticated(true);
+        console.log(data);
+        setAuthenticated(data.userId);
       } else {
         alert(data.error || "Invalid credentials");
       }

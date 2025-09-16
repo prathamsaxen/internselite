@@ -11,12 +11,15 @@ function App() {
   const [inputValue, setInputValue] = useState("");
 
   useEffect(() => {
-    getData();
-  }, []);
+    if (isAuthenticated) {
+      getData();
+    }
+  }, [isAuthenticated]);
 
   const getData = async () => {
     try {
-      const status = await fetch("http://127.0.0.1:8000/todo");
+      console.log(isAuthenticated);
+      const status = await fetch(`http://127.0.0.1:8000/todo/${isAuthenticated}`);
       const data = await status.json();
       setTask(data);
     } catch (err) {
@@ -31,7 +34,7 @@ function App() {
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify({ task: inputValue }),
+          body: JSON.stringify({ task: inputValue, userId: isAuthenticated }),
         });
         getData();
         setInputValue("");
@@ -43,7 +46,13 @@ function App() {
 
   const deleteTask = async (index) => {
     try {
-      await fetch(`http://127.0.0.1:8000/todo/${index}`, { method: "DELETE" });
+      await fetch(`http://127.0.0.1:8000/todo/${index}`, {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ userId: isAuthenticated }),
+      });
       getData();
     } catch (err) {
       console.log(err);
@@ -77,7 +86,7 @@ function App() {
           </div>
         </div>
       ) : (
-        <Login setAuthenticated={setAuthenticated}/>
+        <Login setAuthenticated={setAuthenticated} />
       )}
     </>
   );
