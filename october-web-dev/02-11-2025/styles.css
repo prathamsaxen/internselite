@@ -1,0 +1,59 @@
+/* h1{
+    text-align: center;
+    color: green;
+}
+body{
+    background-color: lightblue;
+}
+
+#heading{
+    background-color: pink;
+}
+
+.heading-section{
+    background-color: yellow;
+    text-align: center;
+} */
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Grid+Single:wght@100..900&display=swap');
+
+/* VW VH, %, px, em, rem, vmin, vmax */
+/* * - Universal Selector */
+*{
+    /* background-color: red; */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    background-color: lightgreen;
+    height: 200px;
+    width: 200px;
+    border: 4px double black;
+    /* border-radius: 50%; */
+    border-radius: 5px;
+    margin:40px;
+    padding: 10px;
+}
+
+.container p{
+    font-family: "Bitcount Grid Single", system-ui;
+    font-optical-sizing: auto;
+    font-size: 10px;
+    font-weight: 300;
+    /* font-style: italic; */
+    text-transform: capitalize;
+    text-align: center;
+    /* text-decoration: overline; */
+    line-height: 50px   ;
+}
+
+.lorem-ipsum{
+    font-family: "Bitcount Grid Single", system-ui;
+    font-optical-sizing: auto;
+    font-size: 10px;
+    line-height: 10px;
+    letter-spacing: 10px;
+    word-wrap: 50px;
+    text-shadow: 2px 2px 2px pink;
+}
