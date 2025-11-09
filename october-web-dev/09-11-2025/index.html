@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Counter Application</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="card">
+      <h1>Counter Application</h1>
+      <p class="description">
+        Easily increase, decrease, or reset your counter with this sleek and modern UI.
+      </p>
+
+      <div class="buttons">
+        <button id="minus-btn">-</button>
+        <p class="valueData">0</p>
+        <button id="plus-btn">+</button>
+      </div>
+
+      <div class="stats">
+        <div>Total Clicks: <span id="click-status">0</span></div>
+        <div>Last Action: <span id="action-status">None</span></div>
+      </div>
+
+      <div class="reset-section">
+        <button id="reset-btn"> Reset</button>
+      </div>
+
+      <footer>Built with ❤️ by Pratham Saxena</footer>
+    </div>
+  </body>
+  <script src="./script.js"></script>
+</html>

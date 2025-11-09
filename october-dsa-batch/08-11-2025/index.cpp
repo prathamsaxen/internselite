@@ -4,7 +4,6 @@ using namespace std;
 
 int linearSearch(int arr[], int size, int key)
 {
-    int iterationCount = 0;
     for(int index=0;index<size;index++)
     {
         iterationCount++;
@@ -13,7 +12,6 @@ int linearSearch(int arr[], int size, int key)
             return index;
          }
     }
-    // cout<<"Iteration Count for Linear Search = "<<iterationCount<<endl;
     return -1;
 }
 

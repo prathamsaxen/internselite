@@ -1,0 +1,114 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  body {
+    background: linear-gradient(135deg, #1e3a8a, #0ea5e9);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card {
+    width: 450px;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+    padding: 35px 40px;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25);
+  }
+
+  h1 {
+    font-weight: 700;
+    font-size: 2.4rem;
+    background: linear-gradient(135deg, #1e3a8a, #0ea5e9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 25px;
+  }
+
+  p.description {
+    color: #444;
+    font-weight: 500;
+    font-size: 1rem;
+    margin-bottom: 30px;
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .buttons button {
+    padding: 10px 25px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #1e3a8a, #0ea5e9);
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .buttons button:hover {
+    transform: scale(1.1);
+    opacity: 0.95;
+  }
+
+  .buttons p {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1e3a8a;
+    width: 60px;
+    text-align: center;
+  }
+
+  .stats {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-around;
+    color: #1e3a8a;
+    font-weight: 600;
+  }
+
+  .reset-section {
+    margin-top: 40px;
+  }
+
+  .reset-section button {
+    width: 80%;
+    padding: 12px 0;
+    background: linear-gradient(135deg, #ef4444, #f87171);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .reset-section button:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+  }
+
+  footer {
+    margin-top: 50px;
+    text-align: center;
+    color: #666;
+    font-size: 0.9rem;
+  }
