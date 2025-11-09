@@ -107,8 +107,25 @@
   }
 
   footer {
-    margin-top: 50px;
-    text-align: center;
-    color: #666;
-    font-size: 0.9rem;
+    margin-top: 25px;
+    font-size: 14px;
+    color: #444;
+  }
+  
+  .social-links {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .social-links a {
+    color: #1e3a8a;
+    font-size: 20px;
+    transition: transform 0.3s, color 0.3s;
+  }
+  
+  .social-links a:hover {
+    color: #0ea5e9;
+    transform: scale(1.2);
   }
