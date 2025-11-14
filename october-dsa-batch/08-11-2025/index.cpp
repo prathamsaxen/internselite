@@ -18,10 +18,8 @@ int linearSearch(int arr[], int size, int key)
 int binarySearchAlgorithm (int arr[],int size, int key)
 {
     int start=0, end = size-1;
-    int iterationCount = 0;
     while(start<=end)
     {
-        iterationCount++;
         int mid = (start+end)/2;
         cout<<mid<<endl;
         if(arr[mid] == key)
