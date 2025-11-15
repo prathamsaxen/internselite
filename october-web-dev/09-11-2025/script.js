@@ -9,6 +9,11 @@ let resetButton = document.getElementById("reset-btn");
 let clickElement = document.getElementById("click-status");
 let actionStatus = document.getElementById("action-status");
 
+// const [data,setData]=useState(0);
+// setData(4);
+
+console.log(document);
+
 const updateValue = () => {
   extractedElement.innerHTML = value;
   clickElement.innerHTML = clicks;
