@@ -54,6 +54,62 @@ void insertAtPosition(Node* &head,int position, int data)
     temp->next=newNode;
 }
 
+// Delete From Begining of the linked list
+void deleteHead(Node* &head){
+    if(!head) return;
+    Node* temp=head;
+    head = head->next;
+    delete temp;
+}
+
+void DeleteTail(Node* &head)
+{
+    if(!head) return;
+    if(head->next == NULL)
+    {
+        delete head;
+        head=NULL;
+        return;
+    }
+    Node* temp = head;
+    while(temp->next->next !=NULL)
+    {
+        temp = temp->next;
+    }
+    delete temp->next;
+    temp->next = NULL;
+}
+
+Node* reverse(Node* head)
+{
+    Node* prev=NULL;
+    Node* curr=head;
+    Node* next;
+
+    while(curr!= NULL)
+    {
+        next = curr->next;
+        curr->next=prev;
+
+        prev=curr;
+        curr=next;
+    }
+    return prev;
+}
+
+Node* findMiddle(Node* head)
+{
+    Node* slow=head;
+    Node* fast=head;
+
+    while(fast && fast -> next)
+    {
+        slow=slow->next;
+        fast=fast->next->next;
+    }
+    return slow;
+}
+
 int main(){
     Node* head=new Node(10);
     Node* second=new Node(20);
@@ -126,5 +182,40 @@ int main(){
         temp=temp->next;
     }
     cout<<"NULL"<<endl;
+
+    deleteHead(head);
+    temp = head;
+
+    while(temp!=NULL)
+    {
+        cout<<temp->data<<" -> ";
+        temp=temp->next;
+    }
+    cout<<"NULL"<<endl;
+
+    DeleteTail(head);
+    temp = head;
+
+    while(temp!=NULL)
+    {
+        cout<<temp->data<<" -> ";
+        temp=temp->next;
+    }
+    cout<<"NULL"<<endl;
+
+    head=reverse(head);
+    temp = head;
+
+    while(temp!=NULL)
+    {
+        cout<<temp->data<<" -> ";
+        temp=temp->next;
+    }
+    cout<<"NULL"<<endl;
+
+    Node* Middle=findMiddle(head);
+    cout<<"Middle Node of the LL => "<< Middle->data<<endl;
+
     return 0;
 }
+
