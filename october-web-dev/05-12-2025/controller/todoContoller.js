@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 
 // Create Task
 exports.createTodo = async (req, res) => {
+  console.log(req.body);
   try {
     const { title, description, completed } = req.body;
     if (!title || !title.trim() === "") {
@@ -22,6 +23,8 @@ exports.createTodo = async (req, res) => {
 
 // Get Task
 exports.getTodos = async (req, res) => {
+  console.log(req.body);
+
   try {
     const todos = await Todo.find();
     res.json(todos);
@@ -34,6 +37,8 @@ exports.getTodos = async (req, res) => {
 
 // Update Task
 exports.updateTodo = async (req, res) => {
+  console.log(req.body);
+
   try {
     const { id } = req.params;
 
@@ -56,6 +61,8 @@ exports.updateTodo = async (req, res) => {
 
 // Delete Task
 exports.deleteTodo = async (req, res) => {
+  console.log(req.body);
+
   try {
     const { id } = req.params;
     if (!mongoose.Types.ObjectId.isValid(id)) {
