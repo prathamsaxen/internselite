@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend:wght@100..900&family=Londrina+Sketch&family=Playwrite+NZ+Basic+Guides&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+.external-csss{
+    background-color: blue;
+    color: red;
+}
+
+/* selector{
+    property:value;
+} */
+
+#text{
+    font-family: "Lexend", sans-serif;
+    font-size: 20px;
+    font-weight: normal;
+    text-align: center;
+}
+
+.box{
+    width: 300px;
+    height: 300px;
+    background-color: bisque;
+
+    border-color: black;
+    border-width: 5px;
+    border-style:solid;
+    border: 10px solid red;
+    margin-left: 200px;
+    padding-top: 40px;
+
+    margin: 100px auto;
+    transition: all 2s ease-in-out;
+
+    /* In animations there is something called timing function in your home work you are supposed to tell me what are timing functions? */
+   
+
+}
+
+.box:hover{
+    transform: rotate(45deg);
+    /* transform: scale(2); */
+    /* transform: translateX(100px); */
+}
+
+
+.data{
+    text-decoration:line-through;
+    text-transform: capitalize;
+}
+
+
