@@ -1,0 +1,137 @@
+
+    *{
+        padding: 0;
+        margin: 0;
+
+    }
+
+/* .container{
+    border: 2px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+
+.box{
+    border: 2px solid red;
+    width: 200px;
+    height: 200px;
+    background-color: bisque;
+    border-radius: 10px;
+    animation: box-animation 2s ease-in-out ;
+
+    h1{
+        animation: text-animation 4s ease-in-out;
+    }
+}
+
+
+@keyframes box-animation {
+    from{
+        transform: rotate(1000deg);
+        scale: 2;
+     
+    }
+    to{
+        transform: rotate(0deg);
+        border-radius: 10px;
+    }
+}
+
+@keyframes text-animation {
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+} */
+
+/* Media Queries */
+/* 320 - 480 - Mobile */
+/* 481 - 768 - Tablet */
+/* 769 - 1024 - Laptop */
+/* 1025 - 1200 - Desktop */
+/* 1201 - 1440 - Desktop */
+/* 1441 - 1920 - Desktop */
+/* 1921 - 2560 - Desktop */
+/* 2561 - 3840 - Desktop */
+/* 3841 - 4096 - Desktop */
+/* 4097 - 5120 - Desktop */
+/* 5121 - 6144 - Desktop */
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    background-color: bisque;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width: 480px) {
+    .container{
+        background-color: red;
+    }
+
+    .box h1{
+        color: yellow;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .container{
+        background-color: pink;
+    }
+
+    .box h1{
+        color: blue;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .container{
+        background-color: yellow;
+    }
+    
+    .box h1{
+        color: red;
+    }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+    .container{
+        background-color: green;
+    }
+
+    .box h1{
+        color: pink;
+    }
+}
+
+@media screen and (min-width: 1201px) and (max-width: 1440px) {
+    .container{
+        background-color: blue;
+    }
+
+    .box h1{
+        color: green;
+    }
+}
