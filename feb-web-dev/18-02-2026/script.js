@@ -119,6 +119,7 @@ else{
 
 
 const arrayData = [1,2,3,4,5,6,7,8,9,10];
+// index  0 1 2 3 4 5 6 7 8 9       
 // [1,2,3,4,5,6,7,8,9,10]
 
 console.log(arrayData[0]);
@@ -129,5 +130,5 @@ console.log(arrayData[4]);
 console.log(arrayData[5]);
 console.log(arrayData[6]);
 console.log(arrayData[7]);
-console.log(arrayData[8]);
+console.log(arrayData[8]);``
 console.log(arrayData[9]);

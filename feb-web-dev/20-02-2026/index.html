@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h1>My Todo List</h1>
+    </header>
+
+    <main class="todo-page">
+      <div class="todo-container">
+        <div class="input-group">
+          <input type="text" id="todo-input" placeholder="Add a new task..." autocomplete="off" />
+          <button type="button" id="add-btn">Add</button>
+        </div>
+
+        <ul class="todo-list" id="todo-list">
+          <!-- <li class="todo-item">
+            <label class="todo-label">
+              <input type="checkbox" class="todo-check" />
+              <span class="todo-text">Learn HTML</span>
+            </label>
+            <button type="button" class="delete" aria-label="Delete">✕</button>
+          </li>
+          <li class="todo-item completed">
+            <label class="todo-label">
+              <input type="checkbox" class="todo-check" checked />
+              <span class="todo-text">Practice CSS</span>
+            </label>
+            <button type="button" class="delete" aria-label="Delete">✕</button>
+          </li>
+          <li class="todo-item">
+            <label class="todo-label">
+              <input type="checkbox" class="todo-check" />
+              <span class="todo-text">Build Todo App</span>
+            </label>
+            <button type="button" class="delete" aria-label="Delete">✕</button>
+          </li> -->
+        </ul>
+
+        <div class="todo-footer">
+          <span class="todo-count" id="todo-count">2 items left</span>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script src="./script.js"></script>
+</html>
