@@ -87,6 +87,16 @@
   transition: transform 0.15s, opacity 0.15s;
 }
 
+.todo-add-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.todo-add-btn:disabled:hover {
+  opacity: 0.5;
+  transform: none;
+}
+
 .todo-add-btn:hover {
   opacity: 0.92;
   transform: translateY(-1px);
@@ -96,6 +106,13 @@
   list-style: none;
   margin: 0;
   padding: 0;
+}
+.todo-delete-btn {
+  font-size: 1.125rem;
+  color: var(--accent);
+  line-height: 1;
+  flex-shrink: 0;
+  cursor: pointer;
 }
 
 .todo-item {
