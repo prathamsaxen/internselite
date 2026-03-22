@@ -56,8 +56,7 @@ function App() {
         },
         body: JSON.stringify({ title: inputValue.trim(), description: inputValue.trim() }),
       });
-   await response.json();
-     
+      await response.json();
     } catch (error) {
       console.error("Error adding task:", error);
     }
@@ -70,7 +69,7 @@ function App() {
       const response = await fetch(`http://localhost:3000/api/todos/delete/${id}`, {
         method: "DELETE",
       });
-     await response.json();
+      await response.json();
     } catch (error) {
       console.error("Error deleting todo:", error);
     }
@@ -87,7 +86,6 @@ function App() {
         body: JSON.stringify({ completed: !todos.find((todo) => todo.id === id).completed }),
       });
       await response.json();
-    
     } catch (error) {
       console.error("Error changing status:", error);
     }
