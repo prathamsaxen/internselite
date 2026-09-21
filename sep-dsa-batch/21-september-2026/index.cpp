@@ -108,3 +108,4 @@ int main(){
 
 
 // Task 1: Implement a function to calculate the power of a number (base^exponent) using recursion.
+// Task 2 : Implement the problem of tower of hanoi using recursion.
