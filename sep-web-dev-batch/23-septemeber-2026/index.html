@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Manager Application</title>
+    <style>
+      .container {
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+      }
+      .task-input {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 10px;
+      }
+      .task-input input {
+        flex: 1;
+      }
+      .task-input button {
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        background-color: #007bff;
+        color: white;
+        cursor: pointer;
+      }
+      .filters {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 10px;
+      }
+      .filters button {
+        padding: 10px;
+      }
+      .filters button:hover {
+        background-color: #007bff;
+        color: white;
+      }
+      .filters button:active {
+        background-color: #007bff;
+        color: white;
+      }
+      .filters button:focus {
+        background-color: #007bff;
+        color: white;
+      }
+      .filters button:disabled {
+        background-color: #ccc;
+        color: #666;
+      }
+      .filters button:active {
+        background-color: #007bff;
+        color: white;
+      }
+      .filters button:focus {
+        background-color: #007bff;
+        color: white;
+      }
+      .filters button:disabled {
+        background-color: #ccc;
+        color: #666;
+      }
+      .filters button:active {
+        background-color: #007bff;
+        color: white;
+      }
+      .filters button:focus {
+        background-color: #007bff;
+        color: white;
+      }
+      .filters button:disabled {
+        background-color: #ccc;
+        color: #666;
+      }
+      .filters button:active {
+        background-color: #007bff;
+        color: white;
+      }
+      .filters button:focus {
+        background-color: #007bff;
+        color: white;
+      }
+
+      .overlay {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 10px;
+      }
+      .overlay button {
+        padding: 10px;
+      } 
+    </style>
+  </head>
+  <body>
+
+    <div class="overlay">
+        <button id="darkTheme">Dark Theme</button>
+        <button id="lightTheme">Light Theme</button>
+    </div>
+    <div class="container">
+      <h1>Task Manager Application</h1>
+      <div class="task-input">
+        <input type="text" id="taskInput" placeholder="Enter a new task" />
+        <button id="addTask">Add Task</button>
+      </div>
+
+      <div class="filters">
+        <button id="allTasks">All Tasks</button>
+        <button id="activeTasks">Active Tasks</button>
+        <button id="completedTasks">Completed Tasks</button>
+      </div>
+
+      <ul id="task-list"></ul>
+    </div>
+  </body>
+  <script src="./script.js"></script>
+</html>

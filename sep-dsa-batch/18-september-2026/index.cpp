@@ -122,6 +122,6 @@ int main() {
 
 
 // Assignments Questions -
-// 1. Print a pyramid pattern using numbers instead of starts
+// 1. Print a pyramid pattern using n e umbers instead of starts
 // 2. Write a program wit check a number is prime or not
 // 3. Write a program to print all the prime numbers between 1 and 100
