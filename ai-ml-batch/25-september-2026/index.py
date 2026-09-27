@@ -128,7 +128,7 @@ df  = sns.load_dataset("tips")
 # dataDf = pd.DataFrame({"Marks":[80, 90, 70, 85, 95, 75, 80, 90, 70, 85, 95, 75, 80, 90, 70, 85, 95, 75]})
 # print(dataDf["Marks"].describe())
 
-
+# HomeWork!
 # 1. Probability
 # 2. Correlation 
 # 3. No Correlation
@@ -141,3 +141,5 @@ df  = sns.load_dataset("tips")
 # 10. Visualize Total Bill vs Tip vs Day
 # 11. Study Hours vs Marks
 # 12. Suggested teaching flow
+
+# Thank you so much!
