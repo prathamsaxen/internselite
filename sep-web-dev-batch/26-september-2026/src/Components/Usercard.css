@@ -1,0 +1,34 @@
+.user-card {
+    border: 1px solid blue;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+}
+.user-card h1 {
+    color: red;
+}
+.user-card h2 {
+    color: green;
+}
+.user-card h3 {
+    color: blue;
+}
+.user-card h4 {
+    color: yellow;
+}
+.user-card h5 {
+    color: purple;
+}
+.user-card h6 {
+    color: orange;
+}
+.user-card h7 {
+    color: brown;
+}
+.user-card h8 {
+    color: grey;
+}
+.user-card h9 {
+    color: black;
+}   
