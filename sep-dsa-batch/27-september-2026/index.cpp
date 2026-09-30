@@ -90,5 +90,3 @@ int main() {
 // Inheritance -> Ability of a class to inherit properties and methods from another class
 // Polymorphism -> Ability of a class to take on multiple forms
 // Abstraction -> Ability of a class to hide complex details and show only essential features
-// Encapsulation -> Ability of a class to hide complex details and show only essential features
-// Encapsulation -> Ability of a class to hide complex details and show only essential features
